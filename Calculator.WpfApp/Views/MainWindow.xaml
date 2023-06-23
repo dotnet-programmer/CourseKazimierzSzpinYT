@@ -7,10 +7,10 @@
                  xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                  mc:Ignorable="d"
                  d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
-		Title="Calculaor"
-		Height="400"
-		Width="400"
-		WindowStartupLocation="CenterScreen">
+				 Title="Calculaor"
+				 Height="400"
+				 Width="400"
+				 WindowStartupLocation="CenterScreen">
 
 	<mah:MetroWindow.Resources>
 		<Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
