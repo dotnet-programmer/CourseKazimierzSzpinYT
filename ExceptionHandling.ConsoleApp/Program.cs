@@ -1,15 +1,34 @@
-﻿
-new EmailSender().Send();
-
-// global exception handling in console app
-AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;
-void OnUnhandledException(object sender, UnhandledExceptionEventArgs e)
+﻿internal class Program
 {
-    //Logger.Error(e.ExceptionObject);
-    Console.WriteLine("Error!");
-	Environment.Exit(1);
-}
+	private static readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
 
+	private static void Main(string[] args)
+	{
+		try
+		{
+			_logger.Info("Application started...");
+			new EmailSender().Send();
+		}
+		catch (Exception exception)
+		{
+			_logger.Error(exception);
+			Console.WriteLine("Nie udało się wysłać maila.");
+        }
+		finally 
+		{
+			_logger.Info("Application stopped...");
+		}
+
+		// global exception handling in console app
+		//AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;
+		//static void OnUnhandledException(object sender, UnhandledExceptionEventArgs e)
+		//{
+		//	//Logger.Error(e.ExceptionObject);
+		//	Console.WriteLine("Error!");
+		//	Environment.Exit(1);
+		//}
+	}
+}
 
 public class EmailSender
 {
@@ -103,8 +122,5 @@ public class EmailSender
 
 public class HostSmtp
 {
-	public void Connect()
-	{
-		throw new Exception("Cannot connect.");
-	}
+	public void Connect() => throw new Exception("Cannot connect.");
 }
