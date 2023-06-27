@@ -1,67 +1,67 @@
 ﻿<mah:MetroWindow x:Class="TicTacToe.WpfApp.MainWindow"
 				 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-				 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 				 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				 xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
 				 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-				 xmlns:local="clr-namespace:TicTacToe.WpfApp"
 				 xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-				 xmlns:i="http://schemas.microsoft.com/xaml/behaviors" 
+				 xmlns:viewmodels="clr-namespace:TicTacToe.WpfApp.ViewModels"
+				 d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
 				 mc:Ignorable="d"
-				 Title="MainWindow" 
-				 Height="450" 
+				 Title="MainWindow"
+				 Height="450"
 				 Width="800"
 				 WindowStartupLocation="CenterScreen">
 	<mah:MetroWindow.Resources>
 		<Style x:Key="BoardLabel"
 			   TargetType="Label"
 			   BasedOn="{StaticResource {x:Type Label}}">
-			<Setter Property="HorizontalContentAlignment" Value="Center"/>
-			<Setter Property="VerticalContentAlignment" Value="Center"/>
-			<Setter Property="BorderBrush" Value="White"/>
-			<Setter Property="FontSize" Value="70"/>
-			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center" />
+			<Setter Property="VerticalContentAlignment" Value="Center" />
+			<Setter Property="BorderBrush" Value="White" />
+			<Setter Property="FontSize" Value="70" />
+			<Setter Property="FontWeight" Value="Bold" />
 			<Style.Triggers>
 				<Trigger Property="IsEnabled" Value="False">
-					<Setter Property="Foreground" Value="White"/>
+					<Setter Property="Foreground" Value="White" />
 				</Trigger>
 			</Style.Triggers>
 		</Style>
-		
+
 		<Style TargetType="Button"
 			   BasedOn="{StaticResource {x:Type Button}}">
-			<Setter Property="Margin" Value="10"/>
-			<Setter Property="FontSize" Value="20"/>
+			<Setter Property="Margin" Value="10" />
+			<Setter Property="FontSize" Value="20" />
 		</Style>
 
 		<Style TargetType="Label"
 			   BasedOn="{StaticResource {x:Type Label}}">
-			<Setter Property="Margin" Value="10"/>
-			<Setter Property="FontSize" Value="20"/>
-			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="Margin" Value="10" />
+			<Setter Property="FontSize" Value="20" />
+			<Setter Property="HorizontalContentAlignment" Value="Center" />
 		</Style>
-
 	</mah:MetroWindow.Resources>
-	
+
 	<Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition/>
+			<RowDefinition />
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition/>
-			<ColumnDefinition Width="Auto"/>
-			<ColumnDefinition/>
+			<ColumnDefinition />
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition />
 		</Grid.ColumnDefinitions>
 
 		<Grid Margin="50">
 			<Grid.RowDefinitions>
-				<RowDefinition/>
-				<RowDefinition/>
-				<RowDefinition/>
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
 			</Grid.ColumnDefinitions>
 
 			<Label Grid.Row="0"
@@ -190,41 +190,41 @@
 		<StackPanel Grid.Row="0"
 					Grid.Column="1"
 					Orientation="Horizontal">
-			<Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"/>
+			<Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
 		</StackPanel>
 
 		<Grid Grid.Row="0"
 			  Grid.Column="2">
 			<Grid.RowDefinitions>
-				<RowDefinition Height="70"/>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition/>
+				<RowDefinition Height="70" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition />
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
+				<ColumnDefinition />
+				<ColumnDefinition />
 			</Grid.ColumnDefinitions>
 
 			<Button Grid.Row="0"
 					Grid.Column="0"
 					Content="NOWA GRA"
-					Command="{Binding NewGameCommand}"/>
-			
+					Command="{Binding NewGameCommand}" />
+
 			<Button Grid.Row="0"
 					Grid.Column="1"
 					Content="RESET"
-					Command="{Binding ResetCommand}"/>
+					Command="{Binding ResetCommand}" />
 
 			<Label Grid.Row="1"
 				   Grid.Column="0"
 				   Grid.ColumnSpan="2"
-				   Content="{Binding TurnInfo}"/>
+				   Content="{Binding TurnInfo}" />
 
 			<Label Grid.Row="2"
 				   Grid.Column="0"
 				   Grid.ColumnSpan="2"
-				   Content="{Binding GameInfo}"/>
+				   Content="{Binding GameInfo}" />
 
 			<DataGrid Grid.Row="3"
 					  Grid.Column="0"

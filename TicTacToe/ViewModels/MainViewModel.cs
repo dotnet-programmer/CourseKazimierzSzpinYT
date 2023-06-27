@@ -18,16 +18,16 @@ public class MainViewModel : BaseViewModel
 	private int _gameNumber;
 
 	public MainViewModel()
-    {
+	{
 		SetCommands();
 		Reset(null);
 	}
 
 	private Bindable2DArray<Field> _board;
 	public Bindable2DArray<Field> Board
-	{ 
-		get => _board; 
-		set { _board = value; OnPropertyChanged(); } 
+	{
+		get => _board;
+		set { _board = value; OnPropertyChanged(); }
 	}
 
 	private string _turnInfo;
@@ -51,7 +51,6 @@ public class MainViewModel : BaseViewModel
 		set { _gamePlays = value; OnPropertyChanged(); }
 	}
 
-
 	public ICommand BoardClickCommand { get; private set; }
 	public ICommand NewGameCommand { get; private set; }
 	public ICommand ResetCommand { get; private set; }
@@ -62,7 +61,6 @@ public class MainViewModel : BaseViewModel
 		NewGameCommand = new RelayCommand(NewGame);
 		ResetCommand = new RelayCommand(Reset);
 	}
-
 
 	private void BoardClick(object obj)
 	{
@@ -127,11 +125,11 @@ public class MainViewModel : BaseViewModel
 				Board[2, int.Parse(columnNumber)].Background = Brushes.Green;
 				break;
 			case WinnerType.Diagonal:
-				if (Board[0,0].Content == Board[1,1].Content && Board[1, 1].Content == Board[2,2].Content)
+				if (Board[0, 0].Content == Board[1, 1].Content && Board[1, 1].Content == Board[2, 2].Content)
 				{
-					Board[0,0].Background = Brushes.Green;
-					Board[1,1].Background = Brushes.Green;
-					Board[2,2].Background = Brushes.Green;
+					Board[0, 0].Background = Brushes.Green;
+					Board[1, 1].Background = Brushes.Green;
+					Board[2, 2].Background = Brushes.Green;
 				}
 				else if (Board[0, 2].Content == Board[1, 1].Content && Board[1, 1].Content == Board[2, 0].Content)
 				{
