@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.WpfApp", "Calcul
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangman.WpfApp", "Hangman.WpfApp\Hangman.WpfApp.csproj", "{40BDA984-8BB0-47BA-97C4-90EEBE621468}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.WpfApp", "TicTacToe\TicTacToe.WpfApp.csproj", "{F115B3CC-F6D5-4596-8355-499D3E69B0CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.WpfApp", "TicTacToe.WpfApp\TicTacToe.WpfApp.csproj", "{F115B3CC-F6D5-4596-8355-499D3E69B0CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling.ConsoleApp", "ExceptionHandling.ConsoleApp\ExceptionHandling.ConsoleApp.csproj", "{DCA1EF30-7BF7-4876-860E-A392C95A08E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionHandling.ConsoleApp", "ExceptionHandling.ConsoleApp\ExceptionHandling.ConsoleApp.csproj", "{DCA1EF30-7BF7-4876-860E-A392C95A08E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookstore.ConsoleApp", "Bookstore.ConsoleApp\Bookstore.ConsoleApp.csproj", "{D2F7A100-531E-4BBC-985F-51B0511C3503}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{DCA1EF30-7BF7-4876-860E-A392C95A08E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCA1EF30-7BF7-4876-860E-A392C95A08E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCA1EF30-7BF7-4876-860E-A392C95A08E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2F7A100-531E-4BBC-985F-51B0511C3503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2F7A100-531E-4BBC-985F-51B0511C3503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2F7A100-531E-4BBC-985F-51B0511C3503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2F7A100-531E-4BBC-985F-51B0511C3503}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
