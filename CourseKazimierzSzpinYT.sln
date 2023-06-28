@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculations.ConsoleApp", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculations.UnitTests", "Calculations.UnitTests\Calculations.UnitTests.csproj", "{83A21157-9103-44F2-9DFA-C64CE0752B8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.UnitTests", "TicTacToe.UnitTests\TicTacToe.UnitTests.csproj", "{80B7A203-D15C-4410-8ECC-BDDFC1F8C898}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{83A21157-9103-44F2-9DFA-C64CE0752B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83A21157-9103-44F2-9DFA-C64CE0752B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83A21157-9103-44F2-9DFA-C64CE0752B8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80B7A203-D15C-4410-8ECC-BDDFC1F8C898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B7A203-D15C-4410-8ECC-BDDFC1F8C898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80B7A203-D15C-4410-8ECC-BDDFC1F8C898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80B7A203-D15C-4410-8ECC-BDDFC1F8C898}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 ﻿namespace TicTacToe.WpfApp.Models;
 
-internal enum WinnerType
+public enum WinnerType
 {
 	None, Row, Column, Diagonal
 }

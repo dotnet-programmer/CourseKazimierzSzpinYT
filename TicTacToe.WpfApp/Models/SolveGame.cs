@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace TicTacToe.WpfApp.Models;
 
-internal class SolveGame
+public class SolveGame
 {
 	private string _winner;
 	private WinnerType _winnerType;
