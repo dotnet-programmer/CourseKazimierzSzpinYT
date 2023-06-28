@@ -20,7 +20,7 @@ using (AppDbContext context = new())
 
 foreach (var item in books)
 {
-    Console.WriteLine($"Id: {item.Id}. Książka: {item.Name} - {item.Price:0.00} PLN.");
+	Console.WriteLine($"Id: {item.Id}. Książka: {item.Name} - {item.Price:0.00} PLN.");
 }
 
 using (AppDbContext context = new())

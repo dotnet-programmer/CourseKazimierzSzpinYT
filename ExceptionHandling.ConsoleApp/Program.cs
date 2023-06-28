@@ -13,8 +13,8 @@
 		{
 			_logger.Error(exception);
 			Console.WriteLine("Nie udało się wysłać maila.");
-        }
-		finally 
+		}
+		finally
 		{
 			_logger.Info("Application stopped...");
 		}

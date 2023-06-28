@@ -21,11 +21,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangman.UnitTests", "Hangma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangman.IntegrationTests", "Hangman.IntegrationTests\Hangman.IntegrationTests.csproj", "{5864F876-3866-4B5D-931A-8359158D0006}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculations.ConsoleApp", "Calculations.ConsoleApp\Calculations.ConsoleApp.csproj", "{2AFE4D0D-9444-4E45-BF2F-60514E24F160}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculations.ConsoleApp", "Calculations.ConsoleApp\Calculations.ConsoleApp.csproj", "{2AFE4D0D-9444-4E45-BF2F-60514E24F160}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculations.UnitTests", "Calculations.UnitTests\Calculations.UnitTests.csproj", "{83A21157-9103-44F2-9DFA-C64CE0752B8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculations.UnitTests", "Calculations.UnitTests\Calculations.UnitTests.csproj", "{83A21157-9103-44F2-9DFA-C64CE0752B8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.UnitTests", "TicTacToe.UnitTests\TicTacToe.UnitTests.csproj", "{80B7A203-D15C-4410-8ECC-BDDFC1F8C898}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.UnitTests", "TicTacToe.UnitTests\TicTacToe.UnitTests.csproj", "{80B7A203-D15C-4410-8ECC-BDDFC1F8C898}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailSender.Client.WpfApp", "EmailSender.Client.WpfApp\EmailSender.Client.WpfApp.csproj", "{DB83DC34-F27C-4BB6-8F33-28C3103BC9ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailSender.Lib", "EmailSender.Lib\EmailSender.Lib.csproj", "{82829270-1E07-4537-9265-43D682B1A3C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +85,14 @@ Global
 		{80B7A203-D15C-4410-8ECC-BDDFC1F8C898}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80B7A203-D15C-4410-8ECC-BDDFC1F8C898}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80B7A203-D15C-4410-8ECC-BDDFC1F8C898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB83DC34-F27C-4BB6-8F33-28C3103BC9ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB83DC34-F27C-4BB6-8F33-28C3103BC9ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB83DC34-F27C-4BB6-8F33-28C3103BC9ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB83DC34-F27C-4BB6-8F33-28C3103BC9ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82829270-1E07-4537-9265-43D682B1A3C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82829270-1E07-4537-9265-43D682B1A3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82829270-1E07-4537-9265-43D682B1A3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82829270-1E07-4537-9265-43D682B1A3C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
