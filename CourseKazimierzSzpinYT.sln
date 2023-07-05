@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileApp.WindowsFormsApp", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopApp.WindowsFormsApp", "ShopApp.WindowsFormsApp\ShopApp.WindowsFormsApp.csproj", "{3D10FC3E-CA94-40D9-84F0-76CA94E889C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipApp.WindowsFormsApp", "ZipApp.WindowsFormsApp\ZipApp.WindowsFormsApp.csproj", "{D96D523E-FC53-4066-BA59-67B3B93F9EE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{3D10FC3E-CA94-40D9-84F0-76CA94E889C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D10FC3E-CA94-40D9-84F0-76CA94E889C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D10FC3E-CA94-40D9-84F0-76CA94E889C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D96D523E-FC53-4066-BA59-67B3B93F9EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D96D523E-FC53-4066-BA59-67B3B93F9EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D96D523E-FC53-4066-BA59-67B3B93F9EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D96D523E-FC53-4066-BA59-67B3B93F9EE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
