@@ -1,6 +1,6 @@
+using System.ComponentModel;
 using Newtonsoft.Json;
 using ShopApp.WindowsFormsApp.Models;
-using System.ComponentModel;
 
 namespace ShopApp.WindowsFormsApp;
 

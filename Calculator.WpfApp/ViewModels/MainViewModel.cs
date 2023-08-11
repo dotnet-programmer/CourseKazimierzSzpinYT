@@ -1,10 +1,10 @@
-﻿using Calculator.WpfApp.Commands;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using Calculator.WpfApp.Commands;
 
 namespace Calculator.WpfApp.ViewModels;
 

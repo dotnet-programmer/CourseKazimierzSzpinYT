@@ -115,9 +115,11 @@ public partial class Form1 : Form
 	}
 
 	private bool IsZipPathSelected() => !string.IsNullOrWhiteSpace(LbZipPath.Text);
+
 	private bool IsUnzipPathSelected() => !string.IsNullOrWhiteSpace(LbUnzipFile.Text);
 
 	private void ShowMessageZipPathIsNotSelected() => MessageBox.Show("Najpierw wybierz folder, który chcesz skompresowaæ");
+
 	private void ShowMessageUnzipPathIsNotSelected() => MessageBox.Show("Najpierw wybierz plik, który chcesz rozpakowaæ");
 
 	private string GetZipPath()

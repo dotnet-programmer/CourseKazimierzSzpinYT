@@ -1,6 +1,4 @@
-﻿using Hangman.WpfApp.Commands;
-using Hangman.WpfApp.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -8,6 +6,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Hangman.WpfApp.Commands;
+using Hangman.WpfApp.Helpers;
 
 namespace Hangman.WpfApp.ViewModels;
 

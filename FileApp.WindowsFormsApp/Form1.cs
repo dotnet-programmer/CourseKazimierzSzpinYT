@@ -1,5 +1,3 @@
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-
 namespace FileApp.WindowsFormsApp;
 
 public partial class Form1 : Form
