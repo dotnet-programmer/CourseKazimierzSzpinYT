@@ -15,6 +15,6 @@ internal class CalculatorTests
 		int result = calculator.Add(1, 2);
 
 		// Assert - sprawdzanie wyniku oczekiwanego z faktycznym
-		Assert.AreEqual(3, result);
+		Assert.That(result, Is.EqualTo(3));
 	}
 }
