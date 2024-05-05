@@ -122,5 +122,6 @@ public class EmailSender
 
 public class HostSmtp
 {
-	public void Connect() => throw new Exception("Cannot connect.");
+	public void Connect()
+		=> throw new Exception("Cannot connect.");
 }

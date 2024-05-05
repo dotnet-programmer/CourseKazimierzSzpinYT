@@ -10,9 +10,9 @@ namespace Calculator.WpfApp.ViewModels;
 
 public class MainViewModel : INotifyPropertyChanged
 {
-	public event PropertyChangedEventHandler? PropertyChanged;
+	public event PropertyChangedEventHandler PropertyChanged;
 
-	private readonly string[] _operations = { "+", "-", "*", "/", "%" };
+	private readonly string[] _operations = ["+", "-", "*", "/", "%"];
 	private readonly DataTable _dataTable = new();
 	private bool _isLastSignAndOperation;
 
@@ -42,9 +42,9 @@ public class MainViewModel : INotifyPropertyChanged
 		GetResultCommand = new RelayCommand(GetResult, CanGetResult);
 	}
 
-	private void AddNumber(object obj)
+	private void AddNumber(object commandParameter)
 	{
-		var number = obj as string;
+		var number = commandParameter as string;
 
 		if (Screen == "0" && number != ",")
 		{
@@ -59,24 +59,27 @@ public class MainViewModel : INotifyPropertyChanged
 		_isLastSignAndOperation = false;
 	}
 
-	private void AddOperation(object obj)
+	private void AddOperation(object commandParameter)
 	{
-		var operation = obj as string;
-		Screen += operation;
+		Screen += commandParameter as string;
 		_isLastSignAndOperation = true;
 	}
 
-	private bool CanAddOperation(object obj) => !_isLastSignAndOperation;
+	private bool CanAddOperation(object commandParameter)
+		=> !_isLastSignAndOperation;
 
-	private void ClearScreen(object obj)
+	private void ClearScreen(object commandParameter)
 	{
 		Screen = "0";
 		_isLastSignAndOperation = false;
 	}
 
-	private void GetResult(object obj) => Screen = _dataTable.Compute(Screen.Replace(",", "."), "").ToString();
+	private void GetResult(object commandParameter)
+		=> Screen = _dataTable.Compute(Screen.Replace(",", "."), "").ToString();
 
-	private bool CanGetResult(object obj) => !_isLastSignAndOperation;
+	private bool CanGetResult(object commandParameter)
+		=> !_isLastSignAndOperation;
 
-	private void OnPropertyChanged([CallerMemberName] string propertyName = null) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+	private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+		=> PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 }

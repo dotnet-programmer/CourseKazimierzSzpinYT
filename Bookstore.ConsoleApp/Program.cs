@@ -8,9 +8,10 @@
 using Bookstore.ConsoleApp;
 using Microsoft.EntityFrameworkCore;
 
-List<Book> books = new();
+List<Book> books = [];
 
 var book = new Book { Name = "Książka 1", Price = 10 };
+
 using (AppDbContext context = new())
 {
 	await context.Books.AddAsync(book);

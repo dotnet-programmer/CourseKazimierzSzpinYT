@@ -19,7 +19,7 @@ internal class MainViewModel : BaseViewModel
 	private List<string> _availableWords;
 	private string _guessingWord;
 	private int _wrongAttempts;
-	private bool _isGameOver = false;
+	private bool _isGameOver;
 
 	public MainViewModel()
 	{
@@ -27,7 +27,7 @@ internal class MainViewModel : BaseViewModel
 		GetAvailableWordsFromFile();
 	}
 
-	private ObservableCollection<char> _guessingLetters = new();
+	private ObservableCollection<char> _guessingLetters = [];
 	public ObservableCollection<char> GuessingLetters
 	{
 		get => _guessingLetters;
@@ -76,7 +76,7 @@ internal class MainViewModel : BaseViewModel
 		UpdateImage();
 	}
 
-	private void EnableKeyboard(Grid? grid)
+	private void EnableKeyboard(Grid grid)
 	{
 		foreach (StackPanel stackPanel in grid.Children)
 		{
@@ -87,19 +87,20 @@ internal class MainViewModel : BaseViewModel
 		}
 	}
 
-	private void NewRandomWord() => _guessingWord = _availableWords[_random.Next(_availableWords.Count)].ToUpper();
+	private void NewRandomWord()
+		=> _guessingWord = _availableWords[_random.Next(_availableWords.Count)].ToUpper();
 
 	private void InitBoard()
 	{
 		GuessingLetters.Clear();
 		foreach (var item in _guessingWord)
 		{
-			char letter = item == ' ' ? ' ' : '\0';
-			GuessingLetters.Add(letter);
+			GuessingLetters.Add(item == ' ' ? ' ' : '\0');
 		}
 	}
 
-	private void UpdateImage() => HangmanPicture = new BitmapImage(new Uri(Path.Combine(Environment.CurrentDirectory, "Images", $"{_wrongAttempts}_mistake.png")));
+	private void UpdateImage()
+		=> HangmanPicture = new BitmapImage(new Uri(Path.Combine(Environment.CurrentDirectory, "Images", $"{_wrongAttempts}_mistake.png")));
 
 	private void KeyClicked(object clickedButton)
 	{
@@ -109,8 +110,8 @@ internal class MainViewModel : BaseViewModel
 		}
 
 		(clickedButton as Button).IsEnabled = false;
-		var choosenKey = Convert.ToChar((clickedButton as Button).Content);
-		var keyExistsInGuessingWord = _guessingWord.Contains(choosenKey);
+		var chosenKey = Convert.ToChar((clickedButton as Button).Content);
+		var keyExistsInGuessingWord = _guessingWord.Contains(chosenKey);
 
 		if (!keyExistsInGuessingWord)
 		{
@@ -128,9 +129,9 @@ internal class MainViewModel : BaseViewModel
 
 		for (int i = 0; i < _guessingWord.Length; i++)
 		{
-			if (_guessingWord[i] == choosenKey)
+			if (_guessingWord[i] == chosenKey)
 			{
-				GuessingLetters[i] = choosenKey;
+				GuessingLetters[i] = chosenKey;
 			}
 		}
 

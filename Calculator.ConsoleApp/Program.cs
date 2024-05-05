@@ -14,7 +14,7 @@ Console.ForegroundColor = ConsoleColor.Green;
 
 Console.WriteLine("CALCULATOR APP!");
 
-string[] operations = { "+", "-", "*", "/", "%" };
+string[] operations = ["+", "-", "*", "/", "%"];
 
 while (true)
 {
@@ -62,12 +62,13 @@ string GetOperation()
 	}
 }
 
-static double Calculate(double number1, double number2, string operation) => operation switch
-{
-	"+" => number1 + number2,
-	"-" => number1 - number2,
-	"*" => number1 * number2,
-	"/" => number1 / number2,
-	"%" => number1 % number2,
-	_ => throw new InvalidOperationException("Unknown operation.")
-};
+static double Calculate(double number1, double number2, string operation)
+	=> operation switch
+	{
+		"+" => number1 + number2,
+		"-" => number1 - number2,
+		"*" => number1 * number2,
+		"/" => number1 / number2,
+		"%" => number1 % number2,
+		_ => throw new InvalidOperationException("Unknown operation.")
+	};

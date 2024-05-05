@@ -9,9 +9,11 @@ internal static class FileHelper
 {
 	private static readonly string _filePath = Path.Combine(Environment.CurrentDirectory, "HangmanWords.txt");
 
-	public static bool FileExists() => File.Exists(_filePath);
+	public static bool FileExists()
+		=> File.Exists(_filePath);
 
-	public static void CreateNewFile() => File.AppendAllText(_filePath, "MODESTPROGGRAMER,PROGRAMISTA,KAZIMIERZ SZPIN");
+	public static void CreateNewFile()
+		=> File.AppendAllText(_filePath, "MODESTPROGGRAMER,PROGRAMISTA,KAZIMIERZ SZPIN");
 
 	public static List<string> GetAvailableWords()
 	{

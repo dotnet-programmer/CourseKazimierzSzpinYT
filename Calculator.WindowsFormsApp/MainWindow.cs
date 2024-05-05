@@ -142,7 +142,9 @@ public partial class MainWindow : Form
 		btnDivision.Enabled = value;
 	}
 
-	private void SetResultBtnState(bool value) => btnResult.Enabled = value;
+	private void SetResultBtnState(bool value)
+		=> btnResult.Enabled = value;
 
-	private void SetCommaBtnState(bool value) => btnComma.Enabled = value;
+	private void SetCommaBtnState(bool value)
+		=> btnComma.Enabled = value;
 }

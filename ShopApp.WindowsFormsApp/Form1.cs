@@ -6,7 +6,7 @@ namespace ShopApp.WindowsFormsApp;
 
 public partial class Form1 : Form
 {
-	private BindingList<Purchase> _purchases = new();
+	private BindingList<Purchase> _purchases = [];
 	private readonly string _filePath = Path.Combine(Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory), "data.json");
 
 	public Form1()
@@ -51,7 +51,7 @@ public partial class Form1 : Form
 		_purchases = JsonConvert.DeserializeObject<BindingList<Purchase>>(json);
 		if (_purchases == null || !_purchases.Any())
 		{
-			_purchases = new();
+			_purchases = [];
 		}
 	}
 

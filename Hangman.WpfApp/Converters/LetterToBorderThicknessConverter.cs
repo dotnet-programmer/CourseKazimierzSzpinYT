@@ -7,7 +7,11 @@ namespace Hangman.WpfApp.Converters;
 
 internal class LetterToBorderThicknessConverter : IValueConverter
 {
-	public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => value as char? == ' ' ? new Thickness(0, 0, 0, 0) : (object)new Thickness(0, 0, 0, 2);
+	public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+		=> (value as char?) == ' '
+			? new Thickness(0, 0, 0, 0)
+			: (object)new Thickness(0, 0, 0, 2);
 
-	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) => throw new NotImplementedException();
+	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+		=> throw new NotImplementedException();
 }

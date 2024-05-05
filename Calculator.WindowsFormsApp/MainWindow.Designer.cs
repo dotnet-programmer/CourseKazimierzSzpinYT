@@ -93,7 +93,7 @@
 			// 
 			btnClear.BackColor = Color.IndianRed;
 			btnClear.Dock = DockStyle.Fill;
-			btnClear.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btnClear.Font = new Font("Segoe UI", 20.25F);
 			btnClear.ForeColor = Color.White;
 			btnClear.Location = new Point(231, 289);
 			btnClear.Name = "btnClear";
@@ -107,7 +107,7 @@
 			// 
 			btnComma.BackColor = Color.MediumSeaGreen;
 			btnComma.Dock = DockStyle.Fill;
-			btnComma.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btnComma.Font = new Font("Segoe UI", 20.25F);
 			btnComma.ForeColor = Color.White;
 			btnComma.Location = new Point(155, 289);
 			btnComma.Name = "btnComma";
@@ -122,7 +122,7 @@
 			btn0.BackColor = Color.MediumSeaGreen;
 			tableLayoutPanel1.SetColumnSpan(btn0, 2);
 			btn0.Dock = DockStyle.Fill;
-			btn0.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btn0.Font = new Font("Segoe UI", 20.25F);
 			btn0.ForeColor = Color.White;
 			btn0.Location = new Point(3, 289);
 			btn0.Name = "btn0";
@@ -136,7 +136,7 @@
 			// 
 			btnResult.BackColor = Color.RoyalBlue;
 			btnResult.Dock = DockStyle.Fill;
-			btnResult.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btnResult.Font = new Font("Segoe UI", 20.25F);
 			btnResult.ForeColor = Color.White;
 			btnResult.Location = new Point(307, 217);
 			btnResult.Name = "btnResult";
@@ -151,7 +151,7 @@
 			// 
 			btnDivision.BackColor = Color.Gray;
 			btnDivision.Dock = DockStyle.Fill;
-			btnDivision.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btnDivision.Font = new Font("Segoe UI", 20.25F);
 			btnDivision.ForeColor = Color.White;
 			btnDivision.Location = new Point(231, 217);
 			btnDivision.Name = "btnDivision";
@@ -165,7 +165,7 @@
 			// 
 			btn3.BackColor = Color.MediumSeaGreen;
 			btn3.Dock = DockStyle.Fill;
-			btn3.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btn3.Font = new Font("Segoe UI", 20.25F);
 			btn3.ForeColor = Color.White;
 			btn3.Location = new Point(155, 217);
 			btn3.Name = "btn3";
@@ -179,7 +179,7 @@
 			// 
 			btn2.BackColor = Color.MediumSeaGreen;
 			btn2.Dock = DockStyle.Fill;
-			btn2.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btn2.Font = new Font("Segoe UI", 20.25F);
 			btn2.ForeColor = Color.White;
 			btn2.Location = new Point(79, 217);
 			btn2.Name = "btn2";
@@ -193,7 +193,7 @@
 			// 
 			btn1.BackColor = Color.MediumSeaGreen;
 			btn1.Dock = DockStyle.Fill;
-			btn1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btn1.Font = new Font("Segoe UI", 20.25F);
 			btn1.ForeColor = Color.White;
 			btn1.Location = new Point(3, 217);
 			btn1.Name = "btn1";
@@ -207,7 +207,7 @@
 			// 
 			btnMultiplication.BackColor = Color.Gray;
 			btnMultiplication.Dock = DockStyle.Fill;
-			btnMultiplication.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btnMultiplication.Font = new Font("Segoe UI", 20.25F);
 			btnMultiplication.ForeColor = Color.White;
 			btnMultiplication.Location = new Point(231, 145);
 			btnMultiplication.Name = "btnMultiplication";
@@ -221,7 +221,7 @@
 			// 
 			btn6.BackColor = Color.MediumSeaGreen;
 			btn6.Dock = DockStyle.Fill;
-			btn6.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btn6.Font = new Font("Segoe UI", 20.25F);
 			btn6.ForeColor = Color.White;
 			btn6.Location = new Point(155, 145);
 			btn6.Name = "btn6";
@@ -235,7 +235,7 @@
 			// 
 			btn5.BackColor = Color.MediumSeaGreen;
 			btn5.Dock = DockStyle.Fill;
-			btn5.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btn5.Font = new Font("Segoe UI", 20.25F);
 			btn5.ForeColor = Color.White;
 			btn5.Location = new Point(79, 145);
 			btn5.Name = "btn5";
@@ -249,7 +249,7 @@
 			// 
 			btn4.BackColor = Color.MediumSeaGreen;
 			btn4.Dock = DockStyle.Fill;
-			btn4.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btn4.Font = new Font("Segoe UI", 20.25F);
 			btn4.ForeColor = Color.White;
 			btn4.Location = new Point(3, 145);
 			btn4.Name = "btn4";
@@ -263,7 +263,7 @@
 			// 
 			btnAdd.BackColor = Color.Gray;
 			btnAdd.Dock = DockStyle.Fill;
-			btnAdd.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btnAdd.Font = new Font("Segoe UI", 20.25F);
 			btnAdd.ForeColor = Color.White;
 			btnAdd.Location = new Point(307, 73);
 			btnAdd.Name = "btnAdd";
@@ -278,7 +278,7 @@
 			// 
 			btnSubtraction.BackColor = Color.Gray;
 			btnSubtraction.Dock = DockStyle.Fill;
-			btnSubtraction.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btnSubtraction.Font = new Font("Segoe UI", 20.25F);
 			btnSubtraction.ForeColor = Color.White;
 			btnSubtraction.Location = new Point(231, 73);
 			btnSubtraction.Name = "btnSubtraction";
@@ -292,7 +292,7 @@
 			// 
 			btn9.BackColor = Color.MediumSeaGreen;
 			btn9.Dock = DockStyle.Fill;
-			btn9.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btn9.Font = new Font("Segoe UI", 20.25F);
 			btn9.ForeColor = Color.White;
 			btn9.Location = new Point(155, 73);
 			btn9.Name = "btn9";
@@ -306,7 +306,7 @@
 			// 
 			btn8.BackColor = Color.MediumSeaGreen;
 			btn8.Dock = DockStyle.Fill;
-			btn8.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btn8.Font = new Font("Segoe UI", 20.25F);
 			btn8.ForeColor = Color.White;
 			btn8.Location = new Point(79, 73);
 			btn8.Name = "btn8";
@@ -320,7 +320,7 @@
 			// 
 			tableLayoutPanel1.SetColumnSpan(tbScreen, 5);
 			tbScreen.Dock = DockStyle.Fill;
-			tbScreen.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
+			tbScreen.Font = new Font("Segoe UI", 22F);
 			tbScreen.Location = new Point(5, 14);
 			tbScreen.Margin = new Padding(5, 14, 5, 5);
 			tbScreen.Name = "tbScreen";
@@ -333,7 +333,7 @@
 			// 
 			btn7.BackColor = Color.MediumSeaGreen;
 			btn7.Dock = DockStyle.Fill;
-			btn7.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btn7.Font = new Font("Segoe UI", 20.25F);
 			btn7.ForeColor = Color.White;
 			btn7.Location = new Point(3, 73);
 			btn7.Name = "btn7";
