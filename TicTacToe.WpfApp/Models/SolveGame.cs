@@ -9,7 +9,8 @@ public class SolveGame
 	private string _winner;
 	private WinnerType _winnerType;
 
-	public GameResult GameResult(string[,] board) => RowIsWon(board) || ColumnIsWon(board) || DiagonalIsWon(board)
+	public GameResult GameResult(string[,] board)
+		=> RowIsWon(board) || ColumnIsWon(board) || DiagonalIsWon(board)
 			? new GameResult()
 			{
 				Result = _winner == "X" ? Result.WonX : Result.WonO,
@@ -96,9 +97,11 @@ public class SolveGame
 		return diagonal;
 	}
 
-	private bool CheckIfGameIsWon(List<string> list) => list.All(x => x != string.Empty && x == list.First());
+	private bool CheckIfGameIsWon(List<string> list)
+		=> list.All(x => x != string.Empty && x == list.First());
 
-	private GameResult GameIsInProgress(string[,] board) => board.Cast<string>().Contains(string.Empty)
+	private GameResult GameIsInProgress(string[,] board)
+		=> board.Cast<string>().Contains(string.Empty)
 			? new GameResult { Result = Result.GameInProgress }
 			: new GameResult { Result = Result.Draw };
 }

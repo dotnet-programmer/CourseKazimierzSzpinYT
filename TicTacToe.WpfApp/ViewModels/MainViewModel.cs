@@ -13,8 +13,10 @@ public class MainViewModel : BaseViewModel
 	private const int Size2 = 3;
 	private const string Player1Sign = "O";
 	private const string Player2Sign = "X";
-	private bool _isPlayer1Turn;
+
 	private readonly SolveGame _solveGame = new();
+
+	private bool _isPlayer1Turn;
 	private int _gameNumber;
 
 	public MainViewModel()
@@ -22,6 +24,9 @@ public class MainViewModel : BaseViewModel
 		SetCommands();
 		Reset(null);
 	}
+
+	public string ActivePlayerSign 
+		=> _isPlayer1Turn ? Player1Sign : Player2Sign;
 
 	private Bindable2DArray<Field> _board;
 	public Bindable2DArray<Field> Board
@@ -64,27 +69,29 @@ public class MainViewModel : BaseViewModel
 
 	private void BoardClick(object obj)
 	{
-		var index = obj as string;
-		var clickedField = GetFieldByIndex(index);
-		var sign = _isPlayer1Turn ? Player1Sign : Player2Sign;
-		clickedField.Content = sign;
+		string index = obj as string;
+		Field clickedField = GetFieldByIndex(index);
+		clickedField.Content = ActivePlayerSign;
 		clickedField.IsEnabled = false;
-		var gameResult = _solveGame.GameResult(
+
+		GameResult gameResult = _solveGame.GameResult(
 			new string[Size1, Size2]
 			{
 				{ Board[0,0].Content, Board[0,1].Content, Board[0,2].Content },
 				{ Board[1,0].Content, Board[1,1].Content, Board[1,2].Content },
 				{ Board[2,0].Content, Board[2,1].Content, Board[2,2].Content }
 			});
+
 		if (gameResult.Result == Result.GameInProgress)
 		{
 			ChangePlayer();
 			return;
 		}
+
 		GameOver(gameResult, index);
 	}
 
-	private void GameOver(GameResult gameResult, string? index)
+	private void GameOver(GameResult gameResult, string index)
 	{
 		if (gameResult.Result == Result.Draw)
 		{
@@ -108,7 +115,7 @@ public class MainViewModel : BaseViewModel
 		DisableField();
 	}
 
-	private void DrawWinner(WinnerType winnerType, string? index)
+	private void DrawWinner(WinnerType winnerType, string index)
 	{
 		var rowNumber = index[0].ToString();
 		var columnNumber = index[2].ToString();
@@ -154,7 +161,7 @@ public class MainViewModel : BaseViewModel
 		}
 	}
 
-	private Field GetFieldByIndex(string? index)
+	private Field GetFieldByIndex(string index)
 	{
 		var parts = index.Split('-');
 		return Board[int.Parse(parts[0]), int.Parse(parts[1])];
@@ -174,11 +181,11 @@ public class MainViewModel : BaseViewModel
 			for (int j = 0; j < Size2; j++)
 			{
 				Board[i, j] = new Field()
-				{
-					Content = string.Empty,
-					Background = Brushes.Transparent,
-					IsEnabled = true,
-				};
+					{
+						Content = string.Empty,
+						Background = Brushes.Transparent,
+						IsEnabled = true,
+					};
 			}
 		}
 	}
@@ -186,8 +193,7 @@ public class MainViewModel : BaseViewModel
 	private void ChangePlayer()
 	{
 		_isPlayer1Turn = !_isPlayer1Turn;
-		var playerTurn = _isPlayer1Turn ? Player1Sign : Player2Sign;
-		TurnInfo = $"Oczekiwanie na: {playerTurn}";
+		TurnInfo = $"Oczekiwanie na: {ActivePlayerSign}";
 	}
 
 	private void Reset(object obj)
@@ -195,7 +201,7 @@ public class MainViewModel : BaseViewModel
 		InitBoard();
 		_isPlayer1Turn = true;
 		TurnInfo = $"Oczekiwanie na: {Player1Sign}";
-		GamePlays = new ObservableCollection<GamePlay>();
+		GamePlays = [];
 		_gameNumber = 1;
 		GameInfo = "";
 	}

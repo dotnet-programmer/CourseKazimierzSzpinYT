@@ -8,37 +8,51 @@
 				 xmlns:viewmodels="clr-namespace:TicTacToe.WpfApp.ViewModels"
 				 d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
 				 mc:Ignorable="d"
-				 Title="MainWindow"
+				 Title="TicTacToe"
+				 TitleCharacterCasing="Normal"
 				 Height="450"
 				 Width="800"
 				 WindowStartupLocation="CenterScreen">
+
 	<mah:MetroWindow.Resources>
 		<Style x:Key="BoardLabel"
 			   TargetType="Label"
 			   BasedOn="{StaticResource {x:Type Label}}">
-			<Setter Property="HorizontalContentAlignment" Value="Center" />
-			<Setter Property="VerticalContentAlignment" Value="Center" />
-			<Setter Property="BorderBrush" Value="White" />
-			<Setter Property="FontSize" Value="70" />
-			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="HorizontalContentAlignment"
+					Value="Center" />
+			<Setter Property="VerticalContentAlignment"
+					Value="Center" />
+			<Setter Property="BorderBrush"
+					Value="White" />
+			<Setter Property="FontSize"
+					Value="70" />
+			<Setter Property="FontWeight"
+					Value="Bold" />
 			<Style.Triggers>
-				<Trigger Property="IsEnabled" Value="False">
-					<Setter Property="Foreground" Value="White" />
+				<Trigger Property="IsEnabled"
+						 Value="False">
+					<Setter Property="Foreground"
+							Value="White" />
 				</Trigger>
 			</Style.Triggers>
 		</Style>
 
 		<Style TargetType="Button"
 			   BasedOn="{StaticResource {x:Type Button}}">
-			<Setter Property="Margin" Value="10" />
-			<Setter Property="FontSize" Value="20" />
+			<Setter Property="Margin"
+					Value="10" />
+			<Setter Property="FontSize"
+					Value="20" />
 		</Style>
 
 		<Style TargetType="Label"
 			   BasedOn="{StaticResource {x:Type Label}}">
-			<Setter Property="Margin" Value="10" />
-			<Setter Property="FontSize" Value="20" />
-			<Setter Property="HorizontalContentAlignment" Value="Center" />
+			<Setter Property="Margin"
+					Value="10" />
+			<Setter Property="FontSize"
+					Value="20" />
+			<Setter Property="HorizontalContentAlignment"
+					Value="Center" />
 		</Style>
 	</mah:MetroWindow.Resources>
 
@@ -72,7 +86,8 @@
 				   Background="{Binding Board[0-0].Background}">
 				<i:Interaction.Triggers>
 					<i:EventTrigger EventName="MouseLeftButtonDown">
-						<i:InvokeCommandAction Command="{Binding BoardClickCommand}" CommandParameter="0-0" />
+						<i:InvokeCommandAction Command="{Binding BoardClickCommand}"
+											   CommandParameter="0-0" />
 					</i:EventTrigger>
 				</i:Interaction.Triggers>
 			</Label>
@@ -86,7 +101,8 @@
 				   Background="{Binding Board[0-1].Background}">
 				<i:Interaction.Triggers>
 					<i:EventTrigger EventName="MouseLeftButtonDown">
-						<i:InvokeCommandAction Command="{Binding BoardClickCommand}" CommandParameter="0-1" />
+						<i:InvokeCommandAction Command="{Binding BoardClickCommand}"
+											   CommandParameter="0-1" />
 					</i:EventTrigger>
 				</i:Interaction.Triggers>
 			</Label>
@@ -99,7 +115,8 @@
 				   Background="{Binding Board[0-2].Background}">
 				<i:Interaction.Triggers>
 					<i:EventTrigger EventName="MouseLeftButtonDown">
-						<i:InvokeCommandAction Command="{Binding BoardClickCommand}" CommandParameter="0-2" />
+						<i:InvokeCommandAction Command="{Binding BoardClickCommand}"
+											   CommandParameter="0-2" />
 					</i:EventTrigger>
 				</i:Interaction.Triggers>
 			</Label>
@@ -113,7 +130,8 @@
 				   Background="{Binding Board[1-0].Background}">
 				<i:Interaction.Triggers>
 					<i:EventTrigger EventName="MouseLeftButtonDown">
-						<i:InvokeCommandAction Command="{Binding BoardClickCommand}" CommandParameter="1-0" />
+						<i:InvokeCommandAction Command="{Binding BoardClickCommand}"
+											   CommandParameter="1-0" />
 					</i:EventTrigger>
 				</i:Interaction.Triggers>
 			</Label>
@@ -127,7 +145,8 @@
 				   Background="{Binding Board[1-1].Background}">
 				<i:Interaction.Triggers>
 					<i:EventTrigger EventName="MouseLeftButtonDown">
-						<i:InvokeCommandAction Command="{Binding BoardClickCommand}" CommandParameter="1-1" />
+						<i:InvokeCommandAction Command="{Binding BoardClickCommand}"
+											   CommandParameter="1-1" />
 					</i:EventTrigger>
 				</i:Interaction.Triggers>
 			</Label>
@@ -141,7 +160,8 @@
 				   Background="{Binding Board[1-2].Background}">
 				<i:Interaction.Triggers>
 					<i:EventTrigger EventName="MouseLeftButtonDown">
-						<i:InvokeCommandAction Command="{Binding BoardClickCommand}" CommandParameter="1-2" />
+						<i:InvokeCommandAction Command="{Binding BoardClickCommand}"
+											   CommandParameter="1-2" />
 					</i:EventTrigger>
 				</i:Interaction.Triggers>
 			</Label>
@@ -154,7 +174,8 @@
 				   Background="{Binding Board[2-0].Background}">
 				<i:Interaction.Triggers>
 					<i:EventTrigger EventName="MouseLeftButtonDown">
-						<i:InvokeCommandAction Command="{Binding BoardClickCommand}" CommandParameter="2-0" />
+						<i:InvokeCommandAction Command="{Binding BoardClickCommand}"
+											   CommandParameter="2-0" />
 					</i:EventTrigger>
 				</i:Interaction.Triggers>
 			</Label>
@@ -168,7 +189,8 @@
 				   Background="{Binding Board[2-1].Background}">
 				<i:Interaction.Triggers>
 					<i:EventTrigger EventName="MouseLeftButtonDown">
-						<i:InvokeCommandAction Command="{Binding BoardClickCommand}" CommandParameter="2-1" />
+						<i:InvokeCommandAction Command="{Binding BoardClickCommand}"
+											   CommandParameter="2-1" />
 					</i:EventTrigger>
 				</i:Interaction.Triggers>
 			</Label>
@@ -181,7 +203,8 @@
 				   Background="{Binding Board[2-2].Background}">
 				<i:Interaction.Triggers>
 					<i:EventTrigger EventName="MouseLeftButtonDown">
-						<i:InvokeCommandAction Command="{Binding BoardClickCommand}" CommandParameter="2-2" />
+						<i:InvokeCommandAction Command="{Binding BoardClickCommand}"
+											   CommandParameter="2-2" />
 					</i:EventTrigger>
 				</i:Interaction.Triggers>
 			</Label>
@@ -234,9 +257,12 @@
 					  AutoGenerateColumns="False"
 					  ItemsSource="{Binding GamePlays}">
 				<DataGrid.Columns>
-					<DataGridTextColumn Binding="{Binding Number}" Header="Rozgrywka" />
-					<DataGridTextColumn Binding="{Binding SignXInfo}" Header="X" />
-					<DataGridTextColumn Binding="{Binding SignOInfo}" Header="O" />
+					<DataGridTextColumn Binding="{Binding Number}"
+										Header="Rozgrywka" />
+					<DataGridTextColumn Binding="{Binding SignOInfo}"
+										Header="O" />
+					<DataGridTextColumn Binding="{Binding SignXInfo}"
+										Header="X" />
 				</DataGrid.Columns>
 			</DataGrid>
 		</Grid>
