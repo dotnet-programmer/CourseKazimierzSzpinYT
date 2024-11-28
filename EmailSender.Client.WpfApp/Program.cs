@@ -5,7 +5,7 @@ Email email = new(new EmailParams
 	HostSmtp = "smtp.gmail.com",
 	Port = 587,
 	EnableSsl = true,
-	SenderName = "Kazimierz Szpin",
+	SenderName = "Marek Nowak",
 	SenderEmail = "maildowysylki@gmail.com",
 	SenderEmailPassword = "password",
 });

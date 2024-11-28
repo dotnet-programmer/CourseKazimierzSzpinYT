@@ -25,7 +25,7 @@ public class MainViewModel : BaseViewModel
 		Reset(null);
 	}
 
-	public string ActivePlayerSign 
+	public string ActivePlayerSign
 		=> _isPlayer1Turn ? Player1Sign : Player2Sign;
 
 	private Bindable2DArray<Field> _board;
@@ -181,11 +181,11 @@ public class MainViewModel : BaseViewModel
 			for (int j = 0; j < Size2; j++)
 			{
 				Board[i, j] = new Field()
-					{
-						Content = string.Empty,
-						Background = Brushes.Transparent,
-						IsEnabled = true,
-					};
+				{
+					Content = string.Empty,
+					Background = Brushes.Transparent,
+					IsEnabled = true,
+				};
 			}
 		}
 	}

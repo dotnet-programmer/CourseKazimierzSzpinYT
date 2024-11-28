@@ -108,10 +108,10 @@
 					  Margin="5"
 					  VerticalScrollBarVisibility="Auto"
 					  HorizontalScrollBarVisibility="Disabled">
-			
+
 			<ItemsControl ItemsSource="{Binding GuessingLetters}"
 						  Background="{Binding BackgroundColor}">
-				
+
 				<ItemsControl.ItemsPanel>
 					<ItemsPanelTemplate>
 						<WrapPanel VerticalAlignment="Center"
@@ -305,6 +305,5 @@
 				</StackPanel>
 			</Grid>
 		</Border>
-
 	</Grid>
 </mah:MetroWindow>
